@@ -5,7 +5,7 @@
 #DeploymentURI=easytravel-staging.northeurope.cloudapp.azure.com ; EasyTravelDeployment=None; 
 #curl -v "${DEPLOYMENTURI}:8091/services/ConfigurationService/setPluginEnabled?name=${EASYTRAVELDEPLOYMENT}&enabled=true"
 
-EASYTRAVELDEPLOYMENT=$(cat easytravel.image)
+EASYTRAVELDEPLOYMENT=$(cat _devopsdemo-easytravel-sre/MyBuildOutputs/easytravel.image)
 
 echo "Read and set deployment: $EASYTRAVELDEPLOYMENT"
 echo "##vso[task.setvariable variable=EASYTRAVELDEPLOYMENT]$EASYTRAVELDEPLOYMENT"
