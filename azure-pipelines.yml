@@ -10,16 +10,19 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo "EASYTRAVELDEPLOYMENT= $EASYTRAVELDEPLOYMENT"
-  displayName: 'Run a one-line script'
-- bash: 
+- script: |
+    echo "EASYTRAVELDEPLOYMENT= $EASYTRAVELDEPLOYMENT"
+    ls '$(System.DefaultWorkingDirectory)'
+    env
+  displayName: 'Show files build and vars'
+- script: ls '$(System.DefaultWorkingDirectory)'
 - task: Bash@3
   inputs:
-    filePath: '$(System.DefaultWorkingDirectory)set_deployment_var.sh'
+    filePath: '$(System.DefaultWorkingDirectory)/set_deployment_var.sh'
 - script: |
     echo "EASYTRAVELDEPLOYMENT now= $EASYTRAVELDEPLOYMENT"
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    env
+  displayName: 'Check deployment vars'
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)'
