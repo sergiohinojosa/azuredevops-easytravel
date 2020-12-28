@@ -3,9 +3,7 @@
 
 # http://easytravel-staging.northeurope.cloudapp.azure.com/easytravel/home
 #DeploymentURI=easytravel-staging.northeurope.cloudapp.azure.com ; EasyTravelDeployment=None; 
-
 #curl -v "${DEPLOYMENTURI}:8091/services/ConfigurationService/setPluginEnabled?name=${EASYTRAVELDEPLOYMENT}&enabled=true"
-
 
 EASYTRAVELDEPLOYMENT=$(cat easytravel.image)
 
@@ -23,4 +21,10 @@ undoDeployment(){
     curl -v "${DEPLOYMENTURI}:8091/services/ConfigurationService/setPluginEnabled?name=${EASYTRAVELDEPLOYMENT}&enabled=false"
 }
 
-doDeployment
+# If calling with a parameter undo deployment
+if [[ $# -eq 1 ]]; then
+
+    undoDeployment
+else
+    doDeployment
+fi
