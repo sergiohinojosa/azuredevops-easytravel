@@ -13,15 +13,16 @@ steps:
 - script: |
     echo "EASYTRAVELDEPLOYMENT= $EASYTRAVELDEPLOYMENT"
     ls '$(System.DefaultWorkingDirectory)'
+    pwd
     env
   displayName: 'Show files build and vars'
-- script: ls '$(System.DefaultWorkingDirectory)'
 - task: Bash@3
   inputs:
     filePath: '$(System.DefaultWorkingDirectory)/set_deployment_var.sh'
 - script: |
-    echo "EASYTRAVELDEPLOYMENT now= $EASYTRAVELDEPLOYMENT"
-    env
+    echo "EASYTRAVELDEPLOYMENT= $EASYTRAVELDEPLOYMENT"
+    ls
+    ls '$(System.DefaultWorkingDirectory)'
   displayName: 'Check deployment vars'
 - task: CopyFiles@2
   inputs:
