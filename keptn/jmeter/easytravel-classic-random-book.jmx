@@ -205,7 +205,7 @@ String LoopCount = vars.get(&quot;LoopCount&quot;);
 headerValue.append(&quot;LSN=&quot;+groupName+&quot;;&quot;);
 
 // LTN The Load Test Name uniquely identifies a test execution (for example, 6h Load Test – June 25)
-headerValue.append(&quot;LTN=LoadTest via JMeterService on Keptn - &quot; +groupName+&quot; - VU(&quot; + threadNum +&quot;) Loops(&quot;+LoopCount+&quot;) - &quot;+ DATEID+&quot;;&quot;);
+headerValue.append(&quot;LTN=AZDO LoadTest via JMeterService on Keptn - &quot; +groupName+&quot; - VU(&quot; + threadNum +&quot;) Loops(&quot;+LoopCount+&quot;) - &quot;+ DATEID+&quot;;&quot;);
 
 // Test Step Name is a logical test step within your load testing script (for example, Login or Add to cart.
 headerValue.append(&quot;TSN=&quot;+samplerName+&quot;;&quot;);
