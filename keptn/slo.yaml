@@ -74,12 +74,11 @@
           - criteria:
               - ">+5%"
       # The criteria of a pass and warning can also be splitted. This means that the two lists are combined with a logical OR.
-      # According to the next example, the pass criteria is met when either the measured absolute value is below 1000 or the increase of the relative value is lower/equals 10 percent.
+      # According to the next example, the pass criteria is met when either the measured absolute value is below 1 sec (or 1000000 microsec) or the increase of the relative value is lower/equals 10 percent.
       - sli: kpi_rt_home
         pass:
           - criteria:
-              - "<1000"
-          - criteria:
+              - "<1000000"
               - "<=+10%"
         warning:
           - criteria:
@@ -88,8 +87,7 @@
       - sli: kpi_rt_recommendations
         pass:
           - criteria:
-              - "<1000"
-          - criteria:
+              - "<1000000"
               - "<=+10%"
         warning:
           - criteria:
@@ -98,8 +96,7 @@
       - sli: kpi_rt_login
         pass:
           - criteria:
-              - "<1000"
-          - criteria:
+              - "<1000000"
               - "<=+10%"
         warning:
           - criteria:
@@ -108,8 +105,7 @@
       - sli: kpi_rt_search
         pass:
           - criteria:
-              - "<1000"
-          - criteria:
+              - "<1000000"
               - "<=+10%"
         warning:
           - criteria:
@@ -118,8 +114,7 @@
       - sli: kpi_rt_journey
         pass:
           - criteria:
-              - "<1000"
-          - criteria:
+              - "<1000000"
               - "<=+10%"
         warning:
           - criteria:
@@ -128,8 +123,7 @@
       - sli: kpi_rt_select_payment
         pass:
           - criteria:
-              - "<1000"
-          - criteria:
+              - "<1000000"
               - "<=+10%"
         warning:
           - criteria:
@@ -138,8 +132,7 @@
       - sli: kpi_rt_check_creditcard
         pass:
           - criteria:
-              - "<1000"
-          - criteria:
+              - "<1000000"
               - "<=+10%"
         warning:
           - criteria:
@@ -148,8 +141,7 @@
       - sli: kpi_rt_submit_payment
         pass:
           - criteria:
-              - "<1000"
-          - criteria:
+              - "<1000000"
               - "<=+10%"
         warning:
           - criteria:
@@ -158,8 +150,7 @@
       - sli: kpi_rt_finish_payment
         pass:
           - criteria:
-              - "<1000"
-          - criteria:
+              - "<1000000"
               - "<=+10%"
         warning:
           - criteria:
