@@ -74,6 +74,18 @@
         warning:
           - criteria:
               - ">+5%"
+      # The criteria of a pass and warning can also be splitted. This means that the two lists are combined with a logical OR.
+      # According to the next example, the pass criteria is met when either the measured absolute value is below 1000 or the increase of the relative value is lower/equals 10 percent.
+      - sli: rt_booking_KPI
+        pass:
+          - criteria:
+              - "<1000"
+          - criteria:
+              - "<=+10%"
+        warning:
+          - criteria:
+              - "<=800"
+        key_sli: true
     total_score:
-      pass: "80%"
-      warning: "70%"
+      pass: "85%"
+      warning: "75%"

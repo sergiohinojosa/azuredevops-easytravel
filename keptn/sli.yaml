@@ -11,3 +11,4 @@ indicators:
   lock_time:    "metricSelector=builtin:service.lockTime:merge(0):sum&entitySelector=tag($SERVICE),type(SERVICE)"
   io_time:      "metricSelector=builtin:service.ioTime:merge(0):sum&entitySelector=tag($SERVICE),type(SERVICE)"
   cpu_time:     "metricSelector=builtin:service.cpu.time:merge(0):sum&entitySelector=tag($SERVICE),type(SERVICE)"
+  rt_booking_KPI:     "metricSelector=calc:service.responsetimetestbookingsteps:merge(0):avg&entitySelector=tag($SERVICE),type(SERVICE)"
