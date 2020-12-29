@@ -31,7 +31,6 @@
           - criteria:
               - "<=2" # more than 2 failed transactions is failed
         key_sli: true
-      - sli: rt_svc_p50
       - sli: rt_svc_p90
         pass:
           - criteria:
