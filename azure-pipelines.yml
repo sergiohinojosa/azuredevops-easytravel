@@ -3,19 +3,21 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+
+
+#trigger:
+#- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
 schedules:
 - cron: "0 * * * *"
   displayName: Hourly build
   branches:
     include:
-    - main
+    - master
   always: true
-
-trigger:
-- main
-
-pool:
-  vmImage: 'ubuntu-latest'
 
 steps:
 - script: |
@@ -27,6 +29,7 @@ steps:
 - task: Bash@3
   inputs:
     filePath: '$(System.DefaultWorkingDirectory)/set_deployment_var.sh'
+
 - script: |
     echo "EASYTRAVELDEPLOYMENT= $EASYTRAVELDEPLOYMENT"
     ls
