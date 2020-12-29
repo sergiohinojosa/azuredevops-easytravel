@@ -1,9 +1,6 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
-
+# EasyTravel AzureDevOps Pipeline 
+# The Pipeline will be triggered each hour and for each hour there is a ProblemPattern to be activated. 
+# This will be saved in a easytravel.image file and will be read in the release pipeline.  
 
 #trigger:
 #- master
