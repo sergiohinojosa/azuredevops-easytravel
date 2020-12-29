@@ -82,7 +82,7 @@
               - "<=+10%"
         warning:
           - criteria:
-              - "<=800"
+              - "<=500000"
         key_sli: true
       - sli: kpi_rt_recommendations
         pass:
@@ -91,7 +91,7 @@
               - "<=+10%"
         warning:
           - criteria:
-              - "<=800"
+              - "<=500000"
         key_sli: true
       - sli: kpi_rt_login
         pass:
@@ -100,7 +100,7 @@
               - "<=+10%"
         warning:
           - criteria:
-              - "<=800"
+              - "<=500000"
         key_sli: true
       - sli: kpi_rt_search
         pass:
@@ -109,7 +109,7 @@
               - "<=+10%"
         warning:
           - criteria:
-              - "<=800"
+              - "<=500000"
         key_sli: true
       - sli: kpi_rt_journey
         pass:
@@ -118,7 +118,7 @@
               - "<=+10%"
         warning:
           - criteria:
-              - "<=800"
+              - "<=800000"
         key_sli: true
       - sli: kpi_rt_select_payment
         pass:
@@ -127,7 +127,7 @@
               - "<=+10%"
         warning:
           - criteria:
-              - "<=800"
+              - "<=500000"
         key_sli: true
       - sli: kpi_rt_check_creditcard
         pass:
@@ -136,7 +136,7 @@
               - "<=+10%"
         warning:
           - criteria:
-              - "<=800"
+              - "<=500000"
         key_sli: true
       - sli: kpi_rt_submit_payment
         pass:
@@ -145,7 +145,7 @@
               - "<=+10%"
         warning:
           - criteria:
-              - "<=800"
+              - "<=500000"
         key_sli: true
       - sli: kpi_rt_finish_payment
         pass:
@@ -154,7 +154,7 @@
               - "<=+10%"
         warning:
           - criteria:
-              - "<=800"
+              - "<=500000"
         key_sli: true
     total_score:
       pass: "85%"
