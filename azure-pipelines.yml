@@ -6,22 +6,22 @@
 
 
 #trigger:
-#- main
+#- master
 
 pool:
   vmImage: 'ubuntu-latest'
 
-schedules:
-- cron: "0 * * * *"
-  displayName: Hourly build
-  branches:
-    include:
-    - master
-  always: true
+#schedules:
+#- cron: "0 * * * *"
+#  displayName: Hourly build
+#  branches:
+#    include:
+#    - master
+#  always: true
 
 steps:
 - script: |
-    echo "EASYTRAVELDEPLOYMENT= $EASYTRAVELDEPLOYMENT"
+    echo "EASYTRAVELDEPLOYMENT = $EASYTRAVELDEPLOYMENT"
     ls '$(System.DefaultWorkingDirectory)'
     pwd
     env
