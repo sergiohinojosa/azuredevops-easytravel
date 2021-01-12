@@ -4,7 +4,7 @@
 
 # Read deployment when no arguments
 readDeploymentFromBuild() {
-    EASYTRAVELDEPLOYMENT=$(cat _devopsdemo-easytravel-sre/MyBuildOutputs/easytravel.image)
+    EASYTRAVELDEPLOYMENT=$(cat _easytravel-cicd/MyBuildOutputs/easytravel.image)
     setVsoDeploymentVariable
 }
 
