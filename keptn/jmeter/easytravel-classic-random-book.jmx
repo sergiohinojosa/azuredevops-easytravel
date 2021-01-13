@@ -49,22 +49,22 @@
           </elementProp>
           <elementProp name="PORT" elementType="Argument">
             <stringProp name="Argument.name">PORT</stringProp>
-            <stringProp name="Argument.value">${__P(PORT,8080)}</stringProp>
+            <stringProp name="Argument.value">${__P(PORT,8079)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="SERVER_URL" elementType="Argument">
             <stringProp name="Argument.name">SERVER_URL</stringProp>
-            <stringProp name="Argument.value">${__P(SERVER_URL,35-178-182-216.nip.io)}</stringProp>
+            <stringProp name="Argument.value">${__P(SERVER_URL,18.134.95.20)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="VUCount" elementType="Argument">
             <stringProp name="Argument.name">VUCount</stringProp>
-            <stringProp name="Argument.value">${__P(VUCount,50)}</stringProp>
+            <stringProp name="Argument.value">${__P(VUCount,1)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="LoopCount" elementType="Argument">
             <stringProp name="Argument.name">LoopCount</stringProp>
-            <stringProp name="Argument.value">${__P(LoopCount,10)}</stringProp>
+            <stringProp name="Argument.value">${__P(LoopCount,3)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="username" elementType="Argument">
@@ -101,7 +101,7 @@
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
-        <stringProp name="TestPlan.comments">the Rmap up will divide the amount of seconds by the number of users</stringProp>
+        <stringProp name="TestPlan.comments">the Ramp-up will divide the amount of seconds by the number of users</stringProp>
         <boolProp name="ThreadGroup.delayedStart">true</boolProp>
       </ThreadGroup>
       <hashTree>
@@ -205,7 +205,7 @@ String LoopCount = vars.get(&quot;LoopCount&quot;);
 headerValue.append(&quot;LSN=&quot;+groupName+&quot;;&quot;);
 
 // LTN The Load Test Name uniquely identifies a test execution (for example, 6h Load Test – June 25)
-headerValue.append(&quot;LTN=AZDO LoadTest via JMeterService on Keptn - &quot; +groupName+&quot; - VU(&quot; + threadNum +&quot;) Loops(&quot;+LoopCount+&quot;) - &quot;+ DATEID+&quot;;&quot;);
+headerValue.append(&quot;LTN=LoadTest via JMeterService on Keptn - &quot; +groupName+&quot; - VU(&quot; + threadNum +&quot;) Loops(&quot;+LoopCount+&quot;) - &quot;+ DATEID+&quot;;&quot;);
 
 // Test Step Name is a logical test step within your load testing script (for example, Login or Add to cart.
 headerValue.append(&quot;TSN=&quot;+samplerName+&quot;;&quot;);
