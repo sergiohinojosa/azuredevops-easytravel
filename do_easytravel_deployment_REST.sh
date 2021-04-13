@@ -15,13 +15,13 @@ setVsoDeploymentVariable() {
 
 # If parameters and == undoDeployment then call undoDeployment, else override deployment
 doDeployment() {
-    echo "Doing deployment via REST to '${DEPLOYMENTURI}' for image tag:${EASYTRAVELDEPLOYMENT}"
-    curl -v "${DEPLOYMENTURI}:8091/services/ConfigurationService/setPluginEnabled?name=${EASYTRAVELDEPLOYMENT}&enabled=true"
+    echo "Doing deployment via REST to 'http://rest.${DOMAIN}' for image tag:${EASYTRAVELDEPLOYMENT}"
+    curl -v "http://rest.${DOMAIN}/services/ConfigurationService/setPluginEnabled?name=${EASYTRAVELDEPLOYMENT}&enabled=true"
 }
 
 undoDeployment() {
-    echo "UnDoing deployment via REST to '${DEPLOYMENTURI}' for image tag:${EASYTRAVELDEPLOYMENT}"
-    curl -v "${DEPLOYMENTURI}:8091/services/ConfigurationService/setPluginEnabled?name=${EASYTRAVELDEPLOYMENT}&enabled=false"
+    echo "UnDoing deployment via REST to 'http://rest.${DOMAIN}' for image tag:${EASYTRAVELDEPLOYMENT}"
+    curl -v "http://rest.${DOMAIN}/services/ConfigurationService/setPluginEnabled?name=${EASYTRAVELDEPLOYMENT}&enabled=false"
 }
 
 # If calling with a parameter undo deployment
